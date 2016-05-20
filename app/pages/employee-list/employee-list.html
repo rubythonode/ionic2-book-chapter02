@@ -1,0 +1,24 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Employee List</ion-title>
+</ion-navbar>
+
+<ion-content padding class="employee-list">
+  <ion-list>
+    <ion-header>
+      <ion-item>
+        <ion-label floating>Search ...</ion-label>
+        <ion-input type="text" (input)="search($event, searchKey)"></ion-input>
+      </ion-item>
+    </ion-header>
+    <ion-item *ngFor="let employee of employees" (click)="itemTapped($event, employee)">
+      <ion-avatar item-left>
+        <img src="{{employee.picture}}"/>
+      </ion-avatar>
+      <h2>{{employee.firstName}} {{employee.lastName}}</h2>
+      <p>{{employee.title}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

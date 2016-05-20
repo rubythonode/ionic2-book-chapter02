@@ -1,0 +1,30 @@
+<ion-navbar *navbar>
+  <ion-title>EmployeeDetails</ion-title>
+</ion-navbar>
+
+<ion-content padding class="employee-details">
+  <div *ngIf="employee">
+    <ion-item>
+     <ion-avatar item-left image-large>
+       <img src="{{employee.picture}}"/>
+     </ion-avatar>
+     <ion-item-content>
+       <h1>{{employee.firstName}} {{employee.lastName}}</h1>
+       <p>{{employee.title}}</p>
+     </ion-item-content>
+    </ion-item>
+
+   <a href="tel:{{employee.phone}}" ion-item>
+       <h2><ion-icon name="call"></ion-icon> Call Office</h2>
+       <p>{{employee.phone}}</p>
+   </a>
+   <a href="tel:{{employee.mobile}}" ion-item>
+       <h2><ion-icon name="phone-portrait"></ion-icon> Call Mobile</h2>
+       <p>{{employee.mobile}}</p>
+   </a>
+   <a href="mailto:{{employee.email}}" ion-item>
+       <h2><ion-icon name="mail"></ion-icon> Email</h2>
+       <p>{{employee.email}}</p>
+   </a>
+  </div>
+</ion-content>
