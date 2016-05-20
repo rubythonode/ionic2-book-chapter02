@@ -1,5 +1,3 @@
-import 'reflect-metadata';
-
 import {ViewChild} from '@angular/core';
 
 import {App, Platform, Nav, Menu} from 'ionic-angular';
@@ -15,7 +13,7 @@ import {EmployeeListPage} from './pages/employee-list/employee-list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   @ViewChild(Menu) menu: Menu;
-  
+
   rootPage: any = HomePage;
   pages: any[] = [
       {title: 'Home', component: HomePage},
