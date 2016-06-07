@@ -1,10 +1,12 @@
-import {Page, NavController} from 'ionic-angular';
+import {Component} from "@angular/core";
+
+import {NavController} from 'ionic-angular';
 import {EmployeeDetailsPage} from '../employee-details/employee-details';
 
 import { Employee } from '../../shared/employee.model';
 import { EmployeeService } from '../../shared/employee.service';
 
-@Page({
+@Component({
   templateUrl: 'build/pages/employee-list/employee-list.html',
   providers: [EmployeeService]
 })
